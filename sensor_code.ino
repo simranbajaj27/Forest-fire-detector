@@ -1,7 +1,8 @@
-#include <dht.h>
+#include <dht.h> //library for reading data from dht11 temperature and humidity sensor
 dht DHT;
 #define DHT11_PIN 7
 int smokeA0 = A5;
+
 void setup() 
 { 
 pinMode(smokeA0, INPUT);
