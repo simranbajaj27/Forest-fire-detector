@@ -1,25 +1,22 @@
  #include <SoftwareSerial.h>
 SoftwareSerial s(D6,D5);
-#include <ArduinoJson.h>
+#include <ArduinoJson.h> //library for sending data in packets
 
-#define BLYNK_PRINT Serial
-#include <ESP8266WiFi.h>
-#include <BlynkSimpleEsp8266.h>
+#define BLYNK_PRINT Serial 
+#include <ESP8266WiFi.h> //nodemcu library
+#include <BlynkSimpleEsp8266.h> //library to connect bylnk with node mcu
 
-//#include <WiFi.h>
-//#include <DHT.h>
 BlynkTimer timer;
-char auth[] = "QIp8dVGuHKVVX8pCG9OktGUIonOh7yCQ";
+char auth[] = "-your_auth_token-";
 
-char ssid[] = "simran";
-char pass[] = "qwertyuiop";
+char ssid[] = "-your_id-";
+char pass[] = "-password-";
 
  
 void setup() {
   // Initialize Serial port
   Serial.begin(9600);
   s.begin(9600);
-  //while (!Serial) continue;
   Blynk.begin(auth, ssid, pass);
   
 }
