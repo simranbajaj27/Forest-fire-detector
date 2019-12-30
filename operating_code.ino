@@ -42,17 +42,7 @@ int x = ((temp[0] - 48) *10) +  (temp[1] - 48) ;
 int y = ((temp[2] - 48) *10) +  (temp[3] - 48) ;
 int z = ((temp[4] - 48) *100) + ((temp[5] - 48) *10) + (temp[6] - 48) ;
 
-/*Serial.print("x =");
-Serial.println(x);
 
-
-Serial.print("y =");
-Serial.println(y);
-
-
-Serial.print("z =");
-Serial.println(z);
-*/
 Serial.write ("DATA,DATE,TIME,");
 //Serial.print("the temperature is : ");
 Serial.print(x);
@@ -90,11 +80,7 @@ delay(1000);
   root["gasv"]= z;
 
 
-/*if(s.available()>0)
-{
- root.printTo(s);
-}
-*/
+
 
 root.printTo(s);
 if (temp[0] == 51 && temp[1] == 50){
